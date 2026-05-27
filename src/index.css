@@ -247,7 +247,12 @@ body {
 }
 
 
-/* ===== Section container ===== */
+@media (max-width: 360px) {
+  #mobile-menu-toggle, .mobile-menu {
+    display: none !important;
+  }
+}
+
 .section-container {
   max-width: 1280px;
   margin: 0 auto;
