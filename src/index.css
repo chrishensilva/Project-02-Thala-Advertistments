@@ -184,6 +184,16 @@ body {
   filter: blur(100px);
   opacity: 0.15;
   pointer-events: none;
+  overflow: hidden;
+}
+
+.glow-orb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+Z/dkAAAAASUVORK5CYII=');
+  mix-blend-mode: overlay;
+  opacity: 0.12;
 }
 
 /* ===== Section container ===== */
