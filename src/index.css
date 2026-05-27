@@ -196,6 +196,57 @@ body {
   opacity: 0.12;
 }
 
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .glow-orb {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .section-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Mobile container width adjustments */
+@media (max-width: 640px) {
+  .max-w-5xl {
+    max-width: 100% !important;
+  }
+  .p-7, .p-8 {
+    padding: 1rem !important;
+  }
+}
+
+/* Mobile typography tweaks */
+@media (max-width: 640px) {
+  .text-hero {
+    font-size: clamp(2rem, 8vw, 3.5rem) !important;
+  }
+  .text-section-title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+  }
+  .text-section-subtitle {
+    font-size: clamp(0.85rem, 4vw, 1rem) !important;
+  }
+}
+
+/* Responsive tweaks for cards and buttons */
+@media (max-width: 640px) {
+  .glass-card {
+    padding: 1.5rem !important;
+  }
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.85rem !important;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+
 /* ===== Section container ===== */
 .section-container {
   max-width: 1280px;
