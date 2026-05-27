@@ -10,7 +10,7 @@ export default function PlanCard({ plan, featured = false, onSelect }) {
   return (
     <div
       id={plan.id}
-      className={`glass-card relative flex flex-col p-7 md:p-8 bg-[#121212]/40 border border-white/[0.08] hover:border-[var(--accent)]/40 ${
+      className={`glass-card relative flex flex-col p-5 sm:p-7 md:p-8 bg-[#121212]/40 border border-white/[0.08] hover:border-[var(--accent)]/40 ${
         featured ? "ring-2 ring-[var(--accent)]/40 shadow-xl shadow-[var(--accent-glow)]" : ""
       }`}
     >
@@ -31,7 +31,7 @@ export default function PlanCard({ plan, featured = false, onSelect }) {
       <div className="mb-5 bg-white/[0.01] border border-white/[0.03] p-4 rounded-2xl">
         <div className="flex items-baseline gap-1">
           <span className="text-[10px] font-black text-[var(--text-muted)] uppercase tracking-wider">LKR</span>
-          <span className="text-4xl font-black tracking-tight gradient-text font-sans">
+          <span className="text-3xl sm:text-4xl font-black tracking-tight gradient-text font-sans">
             {plan.price.replace("/-", "")}
           </span>
           <span className="text-xs text-[var(--text-muted)] ml-1">/ campaign</span>
@@ -39,7 +39,7 @@ export default function PlanCard({ plan, featured = false, onSelect }) {
       </div>
 
       {/* Key analytics */}
-      <div className="flex gap-3 mb-5">
+      <div className="flex gap-2 sm:gap-3 mb-5">
         <div className="flex-1 px-3 py-2.5 rounded-xl bg-white/[0.02] border border-white/[0.05] text-center">
           <div className="text-lg font-black text-white">{plan.channelCount}</div>
           <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)]">
@@ -93,7 +93,7 @@ export default function PlanCard({ plan, featured = false, onSelect }) {
                   {ch.name}
                 </span>
               </div>
-              <span className="text-xs font-bold text-[var(--accent-light)] flex items-center gap-1 font-sans">
+              <span className="text-xs font-bold text-[var(--accent-light)] flex items-center gap-1 font-sans shrink-0">
                 <span className="text-[9px] text-[var(--text-muted)] font-normal font-sans">followers</span>
                 {ch.followers}
               </span>

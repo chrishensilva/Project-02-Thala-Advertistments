@@ -6,14 +6,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative scroll-mt-24 pt-36 pb-24 md:pt-48 md:pb-36 bg-black overflow-hidden"
+      className="relative scroll-mt-24 pt-28 pb-20 md:pt-48 md:pb-36 bg-black overflow-hidden"
     >
       {/* Ambient glow orbs in Musixmatch Coral/Orange */}
       <div
         className="glow-orb animate-float-1"
         style={{
-          width: "600px",
-          height: "600px",
+          width: "min(600px, 80vw)",
+          height: "min(600px, 80vw)",
           background: "var(--accent)",
           top: "-10%",
           right: "-5%",
@@ -23,8 +23,8 @@ export default function Hero() {
       <div
         className="glow-orb animate-float-2"
         style={{
-          width: "500px",
-          height: "500px",
+          width: "min(500px, 70vw)",
+          height: "min(500px, 70vw)",
           background: "#ff6036",
           bottom: "-5%",
           left: "-5%",
@@ -47,8 +47,7 @@ export default function Hero() {
 
           {/* Hero headline - Oversized, high-contrast, bold, close-fitted */}
           <h1 className="text-hero mb-6 text-white tracking-tighter font-black">
-            Broad-spectrum music distribution
-            <br />
+            Broad-spectrum music distribution{" "}
             <span className="gradient-text">via high-impact curation.</span>
           </h1>
 
@@ -64,7 +63,7 @@ export default function Hero() {
           </div>
 
           {/* CTA buttons */}
-          <div className="flex flex-wrap gap-4 mb-14 md:mb-20">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10 md:mb-20">
             <a href="#plans" className="btn-primary">
               <svg
                 width="18"
@@ -98,14 +97,14 @@ export default function Hero() {
           </div>
 
           {/* Trust metrics designed like a media player console */}
-          <div className="grid grid-cols-3 gap-6 max-w-2xl p-6 rounded-2xl bg-white/[0.01] border border-white/[0.04]">
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl p-4 sm:p-6 rounded-2xl bg-white/[0.01] border border-white/[0.04]">
             {[
               { value: aggregateReach, label: "Total Network Reach" },
               { value: totalChannels, label: "TikTok Channels" },
               { value: totalPlatforms, label: "Auxiliary Platforms" },
             ].map((stat) => (
               <div key={stat.label} className="text-center sm:text-left">
-                <div className="text-2xl md:text-3xl font-black tracking-tight text-white">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-white">
                   {stat.value}
                 </div>
                 <div className="text-[9px] md:text-[10px] font-bold tracking-wider uppercase text-[var(--text-muted)] mt-1.5">

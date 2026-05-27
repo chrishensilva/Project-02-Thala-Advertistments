@@ -8,8 +8,8 @@ export default function ContactForm() {
       <div
         className="glow-orb animate-float-2"
         style={{
-          width: "500px",
-          height: "500px",
+          width: "min(500px, 70vw)",
+          height: "min(500px, 70vw)",
           background: "#ff6036",
           bottom: "10%",
           right: "-5%",
@@ -35,13 +35,13 @@ export default function ContactForm() {
         </div>
 
         {/* Curation Console - Expanded to full website container width */}
-        <div className="max-w-5xl mx-auto space-y-6">
+        <div className="w-full max-w-5xl mx-auto space-y-4 sm:space-y-6">
           {/* HOTLINES STYLED AS STREAMING DASHBOARD CHANNELS */}
           <div className="glass-card p-7 md:p-8 hover:transform-none hover:shadow-none bg-[#121212]/40 border border-white/[0.08]">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6">
               Active Hotline Stream
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 gap-4 sm:gap-5">
               <a
                 href="tel:0705871511"
                 className="flex items-center justify-between p-4.5 rounded-2xl bg-white/[0.02] border border-white/[0.04] no-underline group hover:border-[var(--accent)] hover:bg-white/[0.04] transition-all duration-300"
@@ -122,7 +122,7 @@ export default function ContactForm() {
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-6">
               Every promotional package triggers automatic, high-impact extended syndication across our broad digital discovery network:
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {[
                 { name: "TikTok", desc: "Main stream" },
                 { name: "Facebook", desc: "Shorts syndicate" },
@@ -145,7 +145,7 @@ export default function ContactForm() {
           </div>
 
           {/* Response Time Info */}
-          <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/[0.01] border border-white/[0.04]">
+          <div className="flex flex-wrap items-center gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-2xl bg-white/[0.01] border border-white/[0.04]">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>

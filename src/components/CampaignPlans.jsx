@@ -24,8 +24,8 @@ export default function CampaignPlans({ onPlanSelect }) {
       <div
         className="glow-orb animate-float-1"
         style={{
-          width: "700px",
-          height: "700px",
+          width: "min(700px, 90vw)",
+          height: "min(700px, 90vw)",
           background: "var(--accent)",
           top: "15%",
           left: "50%",
@@ -53,8 +53,8 @@ export default function CampaignPlans({ onPlanSelect }) {
         </div>
 
         {/* Filter controls styled like media player playlist filter */}
-        <div className="flex justify-center mb-16">
-          <div className="inline-flex p-1 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+        <div className="flex justify-center mb-10 md:mb-16 px-2">
+          <div className="inline-flex flex-wrap justify-center p-1 gap-1 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             {[
               { id: "all", label: "All Tiers" },
               { id: "starter", label: "Starter Mix" },
@@ -63,7 +63,7 @@ export default function CampaignPlans({ onPlanSelect }) {
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border-none ${
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer border-none ${
                   activeFilter === tab.id
                     ? "bg-gradient-to-r from-[var(--accent)] to-[#ff6036] text-white shadow-md shadow-[var(--accent-glow)] font-sans"
                     : "text-[var(--text-secondary)] hover:text-white bg-transparent hover:bg-white/[0.02] font-sans"
@@ -76,7 +76,7 @@ export default function CampaignPlans({ onPlanSelect }) {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {filteredPlans.map((plan) => (
             <PlanCard
               key={plan.id}
@@ -89,7 +89,7 @@ export default function CampaignPlans({ onPlanSelect }) {
 
         {/* Cross-platform note */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3.5 px-6 py-4 rounded-2xl bg-white/[0.02] border border-white/[0.05] max-w-2xl mx-auto shadow-lg">
+          <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-3.5 px-5 sm:px-6 py-4 rounded-2xl bg-white/[0.02] border border-white/[0.05] max-w-2xl mx-auto shadow-lg text-left">
             <svg
               width="20"
               height="20"
